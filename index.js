@@ -9,18 +9,18 @@ const availableNotes=[2000, 500 , 100 ,20, 10, 5, 1];
 checkButton.addEventListener("click",function validateBillAndCashAmount(){
     hidemsg();
     if(billAmount.value >0 ){
-      if(cashGiven.value >= billAmount.value){
+      if(cashGiven.value>=billAmount.value){
         
           const amountToBeReturned=cashGiven.value-billAmount.value;
           calculateChange(amountToBeReturned);
+      }
 
-
-      }else{
+      else{
         showMessage("The cash provider should atleast be equal to the bill amount");
 
       }
-
-    } else{
+    }
+     else{
       showMessage("Invalid Bill Amount");
            
     }
